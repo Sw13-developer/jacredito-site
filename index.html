@@ -222,7 +222,6 @@
     <div class="hero">
       <h1>Venda seu Crédito Judicial com Segurança</h1>
       <p>Cessão de crédito judicial com transparência, respaldo jurídico e atendimento profissional.</p>
-      <!--<a href="#contato" class="btn">Solicitar Proposta</a>-->
       <a href="https://wa.me/5511911951020"
          target="_blank"
          class="btn"
@@ -293,11 +292,25 @@
     <div class="contact">
       <form>
         <input type="text" placeholder="Seu nome" required>
-        <input type="tel" placeholder="Telefone / WhatsApp" required>
-        <input type="email" placeholder="Email" required>
         <textarea rows="4" placeholder="Fale um pouco sobre o seu crédito judicial" required></textarea>
         <button type="submit">Enviar Solicitação</button>
       </form>
+
+      <script>
+        function enviarWhatsApp(event) {
+          event.preventDefault();
+
+          const nome = document.getElementById('nome').value;
+          const mensagem = document.getElementById('mensagem').value;
+
+          const texto = `Olá, meu nome é ${nome}.%0A%0AInformações sobre meu crédito judicial:%0A${mensagem}`;
+
+          const numeroWhatsApp = '5511911951020'; // substitua pelo número real
+          const url = `https://wa.me/${numeroWhatsApp}?text=${texto}`;
+
+          window.open(url, '_blank');
+        }
+      </script>
 
       <div style="margin-top:30px; text-align:center;">
         <p style="margin-bottom:18px; font-weight:600; color:#0a2a43;">Ou fale conosco diretamente:</p>
@@ -325,6 +338,7 @@
 
 </body>
 </html>
+
 
 
 

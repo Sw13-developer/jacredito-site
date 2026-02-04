@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Já Crédito | Cessão de Crédito Judicial</title>
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HEADER / HERO */
+    header {
+      background: linear-gradient(135deg, #0a2a43, #0d4f8b);
+      color: white;
+      padding: 30px 20px 80px;
+    }
+
+    .topbar {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .logo span {
+      font-weight: 700;
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+    }
+
+    .hero {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header h1 {
+      font-size: 2.6em;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2ecc71;
+      color: #000;
+      padding: 15px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #27ae60; }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0a2a43;
+      font-size: 2em;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .about p {
+      font-size: 1.05em;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px 25px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .card span {
+      font-size: 2.4em;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0d4f8b;
+    }
+
+    /* SECURITY */
+    .security {
+      background: #0a2a43;
+      color: white;
+      border-radius: 20px;
+    }
+
+    .security h2 { color: #2ecc71; }
+
+    .security p {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.05em;
+      opacity: 0.95;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: white;
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    .contact button {
+      width: 100%;
+      background: #0d4f8b;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .contact button:hover { background: #093b66; }
+
+    /* FOOTER */
+    footer {
+      background: #081f33;
+      color: #bbb;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    footer span { color: #2ecc71; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.1em; }
+      .logo span { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="topbar">
+      <div class="logo">
+        <!-- Coloque o arquivo da logo na mesma pasta com o nome: logo-ja-credito.png -->
+        <img src="C:\Users\Escritorio\Desktop\folder\jacredito.jpg" alt="Já Crédito - Cessão de Crédito Judicial">
+        <span>JÁ CRÉDITO</span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>Venda seu Crédito Judicial com Segurança</h1>
+      <p>Cessão de crédito judicial com transparência, respaldo jurídico e atendimento profissional.</p>
+      <a href="#contato" class="btn">Solicitar Proposta</a>
+    </div>
+  </header>
+
+  <!-- QUEM SOMOS -->
+  <section class="container">
+    <h2>Quem Somos</h2>
+    <div class="about">
+      <p>
+        A <strong>Já Crédito</strong> é especializada na cessão de créditos judiciais, atuando com ética,
+        segurança jurídica e contratos transparentes. Nosso compromisso é oferecer liquidez com
+        tranquilidade, sempre respeitando cada etapa legal do processo.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="container">
+    <h2>Como Funciona</h2>
+    <div class="cards">
+      <div class="card">
+        <span>🔍</span>
+        <h3>Análise Gratuita</h3>
+        <p>Avaliamos seu processo de forma criteriosa e sem custos.</p>
+      </div>
+      <div class="card">
+        <span>📄</span>
+        <h3>Proposta Clara</h3>
+        <p>Valores transparentes, sem taxas ocultas ou promessas irreais.</p>
+      </div>
+      <div class="card">
+        <span>⚖️</span>
+        <h3>Contrato Seguro</h3>
+        <p>Negociação formal, com respaldo jurídico e homologação.</p>
+      </div>
+      <div class="card">
+        <span>💰</span>
+        <h3>Liquidez</h3>
+        <p>Recebimento conforme as condições legais do processo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGURANÇA -->
+  <section class="container security">
+    <h2>Segurança e Transparência</h2>
+    <p>
+      Atuamos exclusivamente dentro da legalidade. Não cobramos taxas antecipadas,
+      trabalhamos com contratos formais e análise jurídica completa, garantindo
+      segurança e confiança em todas as etapas.
+    </p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="container">
+    <h2>Fale Conosco</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="tel" placeholder="Telefone / WhatsApp" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="4" placeholder="Fale um pouco sobre o seu crédito judicial" required></textarea>
+        <button type="submit">Enviar Solicitação</button>
+      </form>
+
+      <div style="margin-top:30px; text-align:center;">
+        <p style="margin-bottom:18px; font-weight:600; color:#0a2a43;">Ou fale conosco diretamente:</p>
+
+        <a href="https://wa.me/5500000000000" target="_blank" aria-label="WhatsApp Já Crédito"
+           style="margin:0 14px; display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+               style="width:32px; height:32px;">
+        </a>
+
+        <a href="https://instagram.com/seuinstagram" target="_blank" aria-label="Instagram Já Crédito"
+           style="margin:0 14px; display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+               style="width:32px; height:32px;">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>CNPJ: XX.XXX.XXX/0001-XX • <span>Já Crédito</span></p>
+    <p>Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

@@ -53,21 +53,21 @@
         style="margin-top:18px; display:flex; justify-content:center; align-items:center; gap:10px;"
       >
         <span style="font-weight:600; opacity:0.9;">
-          Siga-nos no Instagram
-        </span>
-
-        <a
-          href="https://www.instagram.com/jacreditoofc?utm_source=qr&igsh=MXN4ajIwajk2Z2dkeQ=="
-          target="_blank"
-          aria-label="Instagram Já Crédito"
-          style="display:inline-flex; align-items:center; text-decoration:none;"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-            alt="Instagram Já Crédito"
-            style="width:26px; height:26px; transition: transform 0.25s ease;"
+          Siga-nos no 
+          <a
+            href="https://www.instagram.com/jacreditoofc?utm_source=qr&igsh=MXN4ajIwajk2Z2dkeQ=="
+            target="_blank"
+            aria-label="Instagram Já Crédito"
+            style="display:inline-flex; align-items:center; text-decoration:none; color:inherit;"
           >
-        </a>
+            Instagram
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram Já Crédito"
+              style="width:26px; height:26px; margin-left:4px; transition: transform 0.25s ease;"
+            >
+          </a>
+        </span>
       </div>
     </div>
   </header>
@@ -162,40 +162,66 @@
     <h2>Fale com um especialista!</h2>
 
     <div class="contact">
-      <form>
+      <form onsubmit="return validarFormulario()">
         <input
           type="text"
+          id="nome"
           placeholder="Seu nome completo"
           required
         >
         <textarea
+          id="mensagem"
           rows="4"
           placeholder="Encaminhe sua dúvida"
           required
         ></textarea>
+
+        <div style="margin:12px 0; font-size:14px;">
+          <label style="display:inline-flex; align-items:center; cursor:pointer; gap:6px;">
+            <input 
+              type="checkbox" 
+              id="politica_privacidade" 
+              required 
+              style="width:auto; height:auto; margin:0;"
+            >
+            Declaro que li e concordo com a 
+            <a href="politica-de-privacidade.html" target="_blank" style="color:#0d4f8b; text-decoration:underline;">
+              política de privacidade de dados
+            </a>.
+          </label>
+        </div>
+
         <button type="submit">Enviar Solicitação</button>
       </form>
 
       <script>
-        function enviarWhatsApp(event) {
-          event.preventDefault();
+        function validarFormulario() {
+          const nome = document.getElementById('nome').value.trim();
+          const mensagem = document.getElementById('mensagem').value.trim();
+          const politica = document.getElementById('politica_privacidade').checked;
 
-          const nome = document.getElementById('nome').value;
-          const mensagem = document.getElementById('mensagem').value;
+          if (!nome || !mensagem) {
+            alert('Por favor, preencha todos os campos.');
+            return false;
+          }
 
+          if (!politica) {
+            alert('Você precisa concordar com a política de privacidade para enviar a solicitação.');
+            return false;
+          }
+
+          // Envia para WhatsApp
           const texto = `Olá, meu nome é ${nome}.%0A%0AInformações sobre meu crédito judicial:%0A${mensagem}`;
-
           const numeroWhatsApp = '5511911951020';
           const url = `https://wa.me/${numeroWhatsApp}?text=${texto}`;
-
           window.open(url, '_blank');
+
+          return false; // impede envio tradicional
         }
       </script>
 
       <div style="margin-top:30px; text-align:center;">
-        <p
-          style="margin-bottom:18px; font-weight:600; color:#0a2a43;"
-        >
+        <p style="margin-bottom:18px; font-weight:600; color:#0a2a43;">
           Ou fale conosco diretamente:
         </p>
 
@@ -243,7 +269,7 @@
   <!-- FOOTER -->
   <footer>
     <p>
-      CNPJ: XX.XXX.XXX/0001-XX •
+      CNPJ: 55.438.773/0001-46 •
       <a
         href="https://www.instagram.com/jacreditoofc?utm_source=qr&igsh=MXN4ajIwajk2Z2dkeQ=="
         target="_blank"
